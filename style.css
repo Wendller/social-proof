@@ -1,0 +1,133 @@
+:root {
+  --primary-dark-magenta: hsl(300, 43%, 22%);
+  --primary-pink: hsl(333, 80%, 67%);
+  --neutral-dark-magenta: hsl(303, 10%, 53%);
+  --neutral-light-magenta: hsl(300, 24%, 96%);
+  --neutral-white: hsl(0, 0%, 100%);
+}
+
+*, html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 15px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: left top, right bottom;
+}
+
+main {
+  width: 960px;
+  height: 490px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+section#header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
+#title h1 {
+  color: var(--primary-dark-magenta);
+  font-size: 44px;
+  margin-bottom: 15px;
+}
+
+#title p {
+  color: var(--neutral-dark-magenta);
+  line-height: 24px;
+}
+
+#scores {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 75px;
+}
+
+#scores .score + .score {
+  margin-left: 30px;
+}
+
+#scores .score + .score + .score{
+  margin-left: 60px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  width: 340px;
+  max-width: 400px;
+  padding: 8px 16px;
+  background-color: var(--neutral-light-magenta);
+  border-radius: 4px;
+  color: var(--neutral-dark-magenta);
+}
+
+
+.stars {
+  margin-right: 10PX;
+}
+
+#messages {
+  display: flex;
+  margin-top: 20px;
+}
+
+#messages :nth-child(2) {
+  margin-top: 15px;
+}
+
+#messages :nth-child(3) {
+  margin-top: 25px;
+}
+
+.message {
+  width: 300px;
+  height: 200px;
+  background-color: var(--primary-dark-magenta);
+  border-radius: 6px;
+  padding: 24px;
+  margin-right: 30px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+
+.author img {
+  border-radius: 50%;
+  width: 40px;
+  margin-right: 14px;
+}
+
+.name {
+  color: var(--neutral-white);
+  font-weight: bold;margin-bottom: 5px;
+}
+
+.verified {
+  color: var(--neutral-dark-magenta);
+  font-weight: bold;
+}
+
+.text {
+  color: var(--neutral-light-magenta);
+  font-size: 12px;
+  line-height: 18px;
+}
