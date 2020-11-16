@@ -73,12 +73,12 @@ section#header {
   padding: 8px 16px;
   background-color: var(--neutral-light-magenta);
   border-radius: 4px;
-  color: var(--neutral-dark-magenta);
+  color: var(--primary-dark-magenta);
 }
 
 
 .stars {
-  margin-right: 10PX;
+  margin-right: 10px;
 }
 
 #messages {
@@ -86,11 +86,11 @@ section#header {
   margin-top: 20px;
 }
 
-#messages :nth-child(2) {
+#messages .message + .message {
   margin-top: 15px;
 }
 
-#messages :nth-child(3) {
+#messages .message + .message + .message {
   margin-top: 25px;
 }
 
@@ -124,10 +124,12 @@ section#header {
 .verified {
   color: var(--neutral-dark-magenta);
   font-weight: bold;
+  margin-top: 0;
 }
 
 .text {
   color: var(--neutral-light-magenta);
   font-size: 12px;
   line-height: 18px;
+  font-weight: bold;
 }
